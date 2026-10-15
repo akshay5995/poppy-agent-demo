@@ -1,0 +1,23 @@
+{
+  "name": "pi-poppy",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Pi extension that lets Pi act as a personal agent with any company supporting the Personal Agent Protocol",
+  "license": "MIT",
+  "type": "module",
+  "keywords": ["pi-package"],
+  "pi": {
+    "extensions": ["./poppy.ts"]
+  },
+  "dependencies": {
+    "poppyseed": "^0.1.1"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-ai": { "optional": true },
+    "@earendil-works/pi-coding-agent": { "optional": true }
+  }
+}

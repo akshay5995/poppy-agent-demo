@@ -1,0 +1,34 @@
+{
+  "name": "poppy-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A personal agent for Pi that speaks the Personal Agent Protocol",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "extension"
+  ],
+  "scripts": {
+    "build": "vite build --config vite.config.mjs",
+    "prestart": "test -f web/dist/index.html || npm run build",
+    "start": "node server.mjs",
+    "terminal": "./run.sh",
+    "typecheck": "./scripts/typecheck.sh"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "streamdown": "^2.7.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^22.20.5",
+    "@vitejs/plugin-react": "^6.1.2",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.4"
+  }
+}
